@@ -10,6 +10,13 @@ import SwiftUI
 struct EventsView: View {
     
     @ObservedObject private var viewModel = EventsViewModel()
+    @State private var showFavoritesOnly = false
+    
+    var filteredEvents: [EventModel] {
+        viewModel.events.filter { event in
+            (!showFavoritesOnly || event.isFavorite)
+        }
+    }
     
     var body: some View {
         if viewModel.events.isEmpty {
@@ -21,8 +28,12 @@ struct EventsView: View {
         } else {
             NavigationView {
                 VStack {
-                    List(viewModel.events) { event in
-                        NavigationLink(destination: EventDetailView(model: event)) {
+                    Toggle(isOn: $showFavoritesOnly) {
+                        Text("Favorites Only")
+                    }.padding(.horizontal, 10)
+                     .padding(.top, 10)
+                    List(filteredEvents) { event in
+                        NavigationLink(destination: EventDetailView(model: event).environmentObject(viewModel)) {
                             EventCellView(model: event)
                         }
                     }.navigationBarTitle("Events", displayMode: .inline)

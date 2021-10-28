@@ -11,6 +11,11 @@ import MapKit
 struct EventDetailView: View {
     
     @State var model: EventModel
+    @EnvironmentObject var modelData: EventsViewModel
+    
+    var eventIndex: Int {
+         modelData.events.firstIndex(where: { $0.id == model.id })!
+     }
     
     var body: some View {
         ScrollView{
@@ -29,6 +34,7 @@ struct EventDetailView: View {
                     .foregroundColor(.primary)
                     .minimumScaleFactor(0.1)
                     .lineLimit(1)
+                FavoriteButton(isSet: $modelData.events[eventIndex].isFavorite)
                 Text(model.genre + " / " + model.subGenre)
                     .font(.body)
                     .foregroundColor(.secondary)
