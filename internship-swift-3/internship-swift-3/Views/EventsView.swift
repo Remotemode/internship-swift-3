@@ -12,11 +12,19 @@ struct EventsView: View {
     @ObservedObject private var viewModel = EventsViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List(viewModel.events) { event in
-                    EventCellView(model: event)
-                }.navigationBarTitle("Events", displayMode: .inline)
+        if viewModel.events.isEmpty {
+            ActivityIndicator()
+                .frame(width: UIScreen.main.bounds.width,
+                       height: 50,
+                       alignment: .center)
+                .navigationBarTitleDisplayMode(.inline)
+        } else {
+            NavigationView {
+                VStack {
+                    List(viewModel.events) { event in
+                        EventCellView(model: event)
+                    }.navigationBarTitle("Events", displayMode: .inline)
+                }
             }
         }
     }
