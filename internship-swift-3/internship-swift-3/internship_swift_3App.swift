@@ -11,7 +11,7 @@ import SwiftUI
 struct internship_swift_3App: App {
     var body: some Scene {
         WindowGroup {
-            EventsView()
+            MainView()
         }
     }
 }
