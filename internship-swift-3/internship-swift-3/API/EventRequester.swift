@@ -6,29 +6,17 @@
 //
 
 import Foundation
+import Alamofire
+import Combine
 
 class EventsRequester {
     
-    func fetch(_ filename: String) -> EventDTO {
-        let data: Data
-        
-        guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-        else {
-            fatalError("Couldn't find \(filename) in main bundle.")
-        }
-        
-        do {
-            data = try Data(contentsOf: file)
-        } catch {
-            fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-        }
-        
-        do {
-            let decoder = JSONDecoder()
-            return try decoder.decode(EventDTO.self, from: data)
-        } catch {
-            fatalError("Couldn't parse \(filename) as \(EventDTO.self):\n\(error)")
-        }
+    let url = "https://app.ticketmaster.com/discovery/v2/events.json?apikey="
+    let apiKey = "sh703rNnW8rstP9VGH6E5Kc1afGL1pse"
+    
+    func fetch() -> AnyPublisher<EventDTO, AFError> {
+        let publisher = AF.request(url + apiKey).publishDecodable(type: EventDTO.self)
+        return publisher.value()
     }
     
 }

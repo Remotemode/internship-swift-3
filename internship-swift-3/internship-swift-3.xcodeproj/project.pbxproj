@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E0E1294DC53C1494E036FDF /* Pods_internship_swift_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AA2C865D18A10A4D0D6C86 /* Pods_internship_swift_3.framework */; };
+		A9B056DD272A8E5A00294789 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */; };
 		A9FC73BA2729893500B8BF3F /* internship_swift_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC73B92729893500B8BF3F /* internship_swift_3App.swift */; };
 		A9FC73BC2729893500B8BF3F /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC73BB2729893500B8BF3F /* EventsView.swift */; };
 		A9FC73BE2729893800B8BF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FC73BD2729893800B8BF3F /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		99AA2C865D18A10A4D0D6C86 /* Pods_internship_swift_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_internship_swift_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3AA237651387E22FF12C82 /* Pods-internship-swift-3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-3.debug.xcconfig"; path = "Target Support Files/Pods-internship-swift-3/Pods-internship-swift-3.debug.xcconfig"; sourceTree = "<group>"; };
+		A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A9FC73B62729893500B8BF3F /* internship-swift-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "internship-swift-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FC73B92729893500B8BF3F /* internship_swift_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internship_swift_3App.swift; sourceTree = "<group>"; };
 		A9FC73BB2729893500B8BF3F /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
@@ -110,7 +112,6 @@
 				A9FC73DB272996A300B8BF3F /* Cells */,
 				A9FC73D82729950E00B8BF3F /* Services */,
 				A9FC73D52729946600B8BF3F /* API */,
-				A9FC73DC272996F200B8BF3F /* Utils */,
 				A9FC73D0272992E800B8BF3F /* Resources */,
 				A9FC73BF2729893800B8BF3F /* Preview Content */,
 			);
@@ -137,6 +138,7 @@
 		A9FC73CA272990ED00B8BF3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9FC73DC272996F200B8BF3F /* Utils */,
 				A9FC73E327299C4900B8BF3F /* MainView.swift */,
 				A9FC73BB2729893500B8BF3F /* EventsView.swift */,
 				A9FC73E527299C8600B8BF3F /* MapView.swift */,
@@ -191,6 +193,7 @@
 		A9FC73DC272996F200B8BF3F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */,
 				A9FC73DF2729973400B8BF3F /* ImageLoader.swift */,
 				A9FC73E1272997D900B8BF3F /* AsyncImage.swift */,
 			);
@@ -324,6 +327,7 @@
 				A9FC73CD2729914700B8BF3F /* EventDTO.swift in Sources */,
 				A9FC73EA27299CDF00B8BF3F /* PlaceAnnotationView.swift in Sources */,
 				A9FC73E427299C4900B8BF3F /* MainView.swift in Sources */,
+				A9B056DD272A8E5A00294789 /* ActivityIndicator.swift in Sources */,
 				A9FC73CF2729919400B8BF3F /* EventModel.swift in Sources */,
 				A9FC73BA2729893500B8BF3F /* internship_swift_3App.swift in Sources */,
 				A9FC73D72729950800B8BF3F /* EventsService.swift in Sources */,
