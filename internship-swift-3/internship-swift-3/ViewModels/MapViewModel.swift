@@ -41,8 +41,25 @@ final class MapViewModel: NSObject, ObservableObject {
     }
     
     func fetchEvents(with mapType: MapType) {
-        let eventDTO = requester.fetch("Event.json")
-        annotationItems = service.createAnnotationModel(from: eventDTO.embedded.events)
+        cancellation = requester.fetch()
+            .mapError(  {(error) -> Error in
+                print(error)
+                return error
+            })
+            .map({ baseModel in
+                return self.service.createAnnotationModel(from: baseModel.embedded.events)
+            })
+            .sink(receiveCompletion: {_ in }, receiveValue: { annotationItems  in
+                switch mapType {
+                case .single(let id):
+                    if let place = annotationItems.first(where: { $0.id == id }) {
+                        self.annotationItems = [place]
+                    }
+                case .allPlace:
+                    self.annotationItems = annotationItems
+                }
+                self.fit()
+            })
     }
     
     func fit() {
