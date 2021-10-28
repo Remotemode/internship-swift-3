@@ -11,6 +11,7 @@ struct EventsView: View {
     
     @ObservedObject private var viewModel = EventsViewModel()
     @State private var showFavoritesOnly = false
+    @State private var searchText = ""
     
     var filteredEvents: [EventModel] {
         viewModel.events.filter { event in
@@ -28,11 +29,12 @@ struct EventsView: View {
         } else {
             NavigationView {
                 VStack {
+                    SearchBar(text: $searchText)
+                    .padding(.top, 10)
                     Toggle(isOn: $showFavoritesOnly) {
                         Text("Favorites Only")
                     }.padding(.horizontal, 10)
-                     .padding(.top, 10)
-                    List(filteredEvents) { event in
+                    List(filteredEvents.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { event in
                         NavigationLink(destination: EventDetailView(model: event).environmentObject(viewModel)) {
                             EventCellView(model: event)
                         }
