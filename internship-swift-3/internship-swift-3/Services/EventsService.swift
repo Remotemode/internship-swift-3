@@ -53,6 +53,22 @@ class EventsService {
         }.compactMap({ $0 })
     }
     
+    func createAnnotationModel(from events: [Event]) -> [AnnotatedItem] {
+        return events.map { event -> AnnotatedItem? in
+            guard let name = event.name,
+                  let latitude = event.embedded.venues.first?.location.latitude,
+                  let longitude = event.embedded.venues.first?.location.longitude,
+                  let latitudeDouble = Double(latitude),
+                  let longitudeDouble = Double(longitude) else { return nil }
+            
+            return AnnotatedItem(id: event.id,
+                                 name: name,
+                                 coordinate: CLLocationCoordinate2D(latitude: latitudeDouble,
+                                                                    longitude: longitudeDouble))
+        }.compactMap({ $0 })
+        
+    }
+    
     //MARK: - Private methods
     
     private func concatAdress(venue:Venue) -> String {
