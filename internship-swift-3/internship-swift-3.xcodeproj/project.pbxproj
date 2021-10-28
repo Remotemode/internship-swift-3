@@ -10,6 +10,7 @@
 		4E0E1294DC53C1494E036FDF /* Pods_internship_swift_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AA2C865D18A10A4D0D6C86 /* Pods_internship_swift_3.framework */; };
 		A9B056DD272A8E5A00294789 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */; };
 		A9B056E0272A904100294789 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056DF272A904000294789 /* EventDetailView.swift */; };
+		A9B056E2272A933600294789 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056E1272A933600294789 /* FavoriteButton.swift */; };
 		A9FC73BA2729893500B8BF3F /* internship_swift_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC73B92729893500B8BF3F /* internship_swift_3App.swift */; };
 		A9FC73BC2729893500B8BF3F /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC73BB2729893500B8BF3F /* EventsView.swift */; };
 		A9FC73BE2729893800B8BF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FC73BD2729893800B8BF3F /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		9E3AA237651387E22FF12C82 /* Pods-internship-swift-3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-3.debug.xcconfig"; path = "Target Support Files/Pods-internship-swift-3/Pods-internship-swift-3.debug.xcconfig"; sourceTree = "<group>"; };
 		A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A9B056DF272A904000294789 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		A9B056E1272A933600294789 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		A9FC73B62729893500B8BF3F /* internship-swift-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "internship-swift-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FC73B92729893500B8BF3F /* internship_swift_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internship_swift_3App.swift; sourceTree = "<group>"; };
 		A9FC73BB2729893500B8BF3F /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */,
 				A9FC73DF2729973400B8BF3F /* ImageLoader.swift */,
 				A9FC73E1272997D900B8BF3F /* AsyncImage.swift */,
+				A9B056E1272A933600294789 /* FavoriteButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				A9FC73E2272997D900B8BF3F /* AsyncImage.swift in Sources */,
 				A9FC73E627299C8600B8BF3F /* MapView.swift in Sources */,
 				A9FC73E02729973400B8BF3F /* ImageLoader.swift in Sources */,
+				A9B056E2272A933600294789 /* FavoriteButton.swift in Sources */,
 				A9FC73C9272990B200B8BF3F /* EventsViewModel.swift in Sources */,
 				A9FC73EC27299D0800B8BF3F /* AnnotatedItem.swift in Sources */,
 				A9B056E0272A904100294789 /* EventDetailView.swift in Sources */,
