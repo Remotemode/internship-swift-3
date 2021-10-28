@@ -22,7 +22,9 @@ struct EventsView: View {
             NavigationView {
                 VStack {
                     List(viewModel.events) { event in
-                        EventCellView(model: event)
+                        NavigationLink(destination: EventDetailView(model: event)) {
+                            EventCellView(model: event)
+                        }
                     }.navigationBarTitle("Events", displayMode: .inline)
                 }
             }
