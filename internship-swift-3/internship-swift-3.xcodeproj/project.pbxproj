@@ -11,6 +11,7 @@
 		A9B056DD272A8E5A00294789 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */; };
 		A9B056E0272A904100294789 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056DF272A904000294789 /* EventDetailView.swift */; };
 		A9B056E2272A933600294789 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056E1272A933600294789 /* FavoriteButton.swift */; };
+		A9B056E4272A958800294789 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B056E3272A958800294789 /* SearchBar.swift */; };
 		A9FC73BA2729893500B8BF3F /* internship_swift_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC73B92729893500B8BF3F /* internship_swift_3App.swift */; };
 		A9FC73BC2729893500B8BF3F /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC73BB2729893500B8BF3F /* EventsView.swift */; };
 		A9FC73BE2729893800B8BF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FC73BD2729893800B8BF3F /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		A9B056DC272A8E5A00294789 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A9B056DF272A904000294789 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		A9B056E1272A933600294789 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		A9B056E3272A958800294789 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A9FC73B62729893500B8BF3F /* internship-swift-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "internship-swift-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FC73B92729893500B8BF3F /* internship_swift_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internship_swift_3App.swift; sourceTree = "<group>"; };
 		A9FC73BB2729893500B8BF3F /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				A9FC73DF2729973400B8BF3F /* ImageLoader.swift */,
 				A9FC73E1272997D900B8BF3F /* AsyncImage.swift */,
 				A9B056E1272A933600294789 /* FavoriteButton.swift */,
+				A9B056E3272A958800294789 /* SearchBar.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				A9FC73EA27299CDF00B8BF3F /* PlaceAnnotationView.swift in Sources */,
 				A9FC73E427299C4900B8BF3F /* MainView.swift in Sources */,
 				A9B056DD272A8E5A00294789 /* ActivityIndicator.swift in Sources */,
+				A9B056E4272A958800294789 /* SearchBar.swift in Sources */,
 				A9FC73CF2729919400B8BF3F /* EventModel.swift in Sources */,
 				A9FC73BA2729893500B8BF3F /* internship_swift_3App.swift in Sources */,
 				A9FC73D72729950800B8BF3F /* EventsService.swift in Sources */,
