@@ -17,7 +17,8 @@ struct FavoriteButton: View {
         }) {
             Image(systemName: isSet ? "star.fill" : "star")
                 .foregroundColor(isSet ? Color.yellow : Color.gray)
-        }
+        }.rotation3DEffect(.degrees(isSet ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+         .animation(.interpolatingSpring(stiffness: 20, damping: 1))
     }
 }
 
