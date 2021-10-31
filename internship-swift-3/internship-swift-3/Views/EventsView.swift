@@ -19,6 +19,10 @@ struct EventsView: View {
         }
     }
     
+    var searchListEvents: [EventModel] {
+        filteredEvents.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })
+    }
+    
     var body: some View {
         if viewModel.events.isEmpty {
             ActivityIndicator()
@@ -34,11 +38,15 @@ struct EventsView: View {
                     Toggle(isOn: $showFavoritesOnly) {
                         Text("Favorites Only")
                     }.padding(.horizontal, 10)
-                    List(filteredEvents.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { event in
+                    List(searchListEvents) { event in
                         NavigationLink(destination: EventDetailView(model: event).environmentObject(viewModel)) {
                             EventCellView(model: event)
                         }
-                    }.navigationBarTitle("Events", displayMode: .inline)
+                    }.navigationBarTitle("Events", displayMode: .inline).overlay(Group {
+                        if searchListEvents.isEmpty {
+                            Text("There is no events.")
+                        }
+                    })
                 }
             }
         }
