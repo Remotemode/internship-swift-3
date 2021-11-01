@@ -21,8 +21,7 @@ struct MainView: View {
                 }
         }
         .background(Color.gray)
-        
-        
+        .accentColor(.red)
     }
 }
 

@@ -25,7 +25,7 @@ struct EventsView: View {
                         NavigationLink(destination: EventDetailView(model: event)) {
                             EventCellView(model: event)
                         }
-                    }.navigationBarTitle("Events", displayMode: .inline)
+                    }.navigationBarTitle(Text("Events").font(.body), displayMode: .large)
                 }
             }
         }
